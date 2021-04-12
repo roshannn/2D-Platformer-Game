@@ -10,10 +10,8 @@ public class PlayerController : MonoBehaviour
     const string CROUCH = " Crouch";
     const string GROUNDED = "isGrounded";
     [SerializeField] int scorePerKey;
-    public SceneLoader sceneLoader;
-    
-    public JumpCollider jumpCollider;
-    
+    public SceneLoader sceneLoader;    public JumpCollider jumpCollider;
+    bool isDead;
 
     [Range(0,10)][SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
@@ -21,7 +19,7 @@ public class PlayerController : MonoBehaviour
     public ScoreController scoreController;
     Rigidbody2D rb2d;
     BoxCollider2D boxCollider;
-    bool isGrounded;
+    public bool isGrounded;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<EnemyController>() != null)
@@ -43,41 +41,45 @@ public class PlayerController : MonoBehaviour
     
     private void Start()
     {
+
+        isDead = animator.GetBool("Dead");
         rb2d = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
     }
     private void Update()
     {
-        float horizontal = Input.GetAxisRaw(HORIZONTAL); 
+
+        float horizontal = Input.GetAxisRaw(HORIZONTAL);
         float crouch = Input.GetAxisRaw("Crouch");
         float jump = Input.GetAxisRaw(JUMP);
         animator.SetBool(GROUNDED, isGrounded);
         JumpAnimation(jump);
         MoveAnimation(horizontal);
         CrouchAnimation(crouch);
-        PlayerMovement(horizontal,crouch,jump);
-
+        PlayerMovement(horizontal, crouch, jump);
         isGrounded = jumpCollider.GrounChecker();
     }
 
     private void PlayerMovement(float horizontal,float crouch,float jump)
     {
-        Vector3 playerPos = transform.position;
-        if (crouch > 0)
+        if (!animator.GetBool("Dead"))
         {
-            playerPos.x += horizontal * moveSpeed * Time.deltaTime * 0.2f;
-        }
-        else
-        {
-            playerPos.x += horizontal * moveSpeed * Time.deltaTime;
-        }
-        transform.position = playerPos;
+            Vector3 playerPos = transform.position;
+            if (crouch > 0)
+            {
+                playerPos.x += horizontal * moveSpeed * Time.deltaTime * 0.2f;
+            }
+            else
+            {
+                playerPos.x += horizontal * moveSpeed * Time.deltaTime;
+            }
+            transform.position = playerPos;
 
-        if (jump > 0 && isGrounded)
-        {
-            rb2d.AddForce(new Vector2(0, jumpForce));
+            if (jump > 0 && isGrounded)
+            {
+                rb2d.AddForce(new Vector2(0, jumpForce));
+            }
         }
-
     }
 
     private void CrouchAnimation(float crouch)
@@ -99,20 +101,22 @@ public class PlayerController : MonoBehaviour
 
     private void MoveAnimation(float horizontal)
     {
-        
 
-        float absHorizontal = Mathf.Abs(horizontal);
-        animator.SetFloat("Speed", absHorizontal);
-        Vector3 scale = transform.localScale;
-        if (horizontal > 0)
+        if (!animator.GetBool("Dead"))
         {
-            scale.x = absHorizontal;
-        }
-        else if (horizontal < 0)
-        {
-            scale.x = -1f * absHorizontal;
-        }
-        transform.localScale = scale;
+            float absHorizontal = Mathf.Abs(horizontal);
+            animator.SetFloat("Speed", absHorizontal);
+            Vector3 scale = transform.localScale;
+            if (horizontal > 0)
+            {
+                scale.x = absHorizontal;
+            }
+            else if (horizontal < 0)
+            {
+                scale.x = -1f * absHorizontal;
+            }
+            transform.localScale = scale;
+        }       
     }
 
     private void JumpAnimation(float jump)
