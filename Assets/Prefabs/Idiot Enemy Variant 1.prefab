@@ -7,10 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1749901196, guid: 61ab2d7ee23ba124ab4a29ee9dc1b9d6, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1401684954442269516, guid: 61ab2d7ee23ba124ab4a29ee9dc1b9d6,
         type: 3}
       propertyPath: m_Name
-      value: Idiot Enemy
+      value: Idiot Enemy Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 1401684954442269516, guid: 61ab2d7ee23ba124ab4a29ee9dc1b9d6,
         type: 3}

@@ -2,37 +2,117 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
-{
+{   // state variables
+    
+    bool isGrounded;
+    bool isDead;
+    
+    [Header("Health...")]
+    
     public int health ;
+    public int numOfHearts;
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+    
+    //Constant Strings
+    
     const string HORIZONTAL = "Horizontal";
     const string JUMP = "Jump";
     const string CROUCH = " Crouch";
     const string GROUNDED = "isGrounded";
+    
+    [Header("Score...")]
+    
     [SerializeField] int scorePerKey;
-    public SceneLoader sceneLoader;
-    public JumpCollider jumpCollider;
+    public ScoreController scoreController;
+   
+    [Header("Movement...")]
+    
     [Range(0,10)][SerializeField] float moveSpeed;
     [SerializeField] float jumpForce;
-    public Animator animator;
-    public ScoreController scoreController;
+    
+    //cached references
+    
+    Animator animator;
+    JumpCollider jumpCollider;
     Rigidbody2D rb2d;
     BoxCollider2D boxCollider;
-    bool isGrounded;
-    bool isDead;
+    public SceneLoader sceneLoader;
+    private void Start()
+    {
+        animator = this.GetComponent<Animator>();
+        jumpCollider = this.GetComponentInChildren<JumpCollider>();
+        rb2d = GetComponent<Rigidbody2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
+    }
+    private void Update()
+    {
+        float horizontal = Input.GetAxisRaw(HORIZONTAL);
+        float crouch = Input.GetAxisRaw("Crouch");
+        float jump = Input.GetAxisRaw(JUMP);
+        SetGrounded();
+        JumpAnimation(jump);
+        MoveAnimation(horizontal);
+        CrouchAnimation(crouch);
+        PlayerMovement(horizontal, crouch, jump);
+        CheckHealth();
+        isGrounded = jumpCollider.GrounChecker();
+    }
+
+    private void CheckHealth()
+    {
+        if (health > numOfHearts)
+        {
+            health = numOfHearts;
+        }
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < numOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHeart;
+            }
+        }
+    }
+
+    private void SetGrounded()
+    {
+        animator.SetBool(GROUNDED, isGrounded);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Health: " + health);
         if (collision.gameObject.GetComponent<EnemyController>() != null && health>0)
         {
-            health--;
-            if (health == 0)
-            {
-                StartCoroutine(PlayerDeath());
-            }
+            DamagePlayer();
         }
-    } 
+    }
+
+    private void DamagePlayer()
+    {
+        health--;
+        if (health == 0)
+        {
+            StartCoroutine(PlayerDeath());
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         Debug.Log("Health: " + health);
@@ -50,24 +130,8 @@ public class PlayerController : MonoBehaviour
     }
 
     
-    private void Start()
-    {
-        rb2d = GetComponent<Rigidbody2D>();
-        boxCollider = GetComponent<BoxCollider2D>();
-    }
-    private void Update()
-    {
-        float horizontal = Input.GetAxisRaw(HORIZONTAL); 
-        float crouch = Input.GetAxisRaw("Crouch");
-        float jump = Input.GetAxisRaw(JUMP);
-        animator.SetBool(GROUNDED, isGrounded);
-        JumpAnimation(jump);
-        MoveAnimation(horizontal);
-        CrouchAnimation(crouch);
-        PlayerMovement(horizontal,crouch,jump);
-
-        isGrounded = jumpCollider.GrounChecker();
-    }
+    
+    
 
     private void PlayerMovement(float horizontal,float crouch,float jump)
     {
@@ -86,7 +150,8 @@ public class PlayerController : MonoBehaviour
 
             if (jump > 0 && isGrounded)
             {
-                rb2d.AddForce(new Vector2(0, jumpForce));
+                rb2d.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
+                isGrounded = false;
             }
         }
         
