@@ -1,0 +1,755 @@
+fileFormatVersion: 2
+guid: 07edfd4a9c345924f92a994d52785fa9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: GameOverEllen_0
+  - first:
+      213: 21300002
+    second: GameOverEllen_1
+  - first:
+      213: 21300004
+    second: GameOverEllen_2
+  - first:
+      213: 21300006
+    second: GameOverEllen_3
+  - first:
+      213: 21300008
+    second: GameOverEllen_4
+  - first:
+      213: 21300010
+    second: GameOverEllen_5
+  - first:
+      213: 21300012
+    second: GameOverEllen_6
+  - first:
+      213: 21300014
+    second: GameOverEllen_7
+  - first:
+      213: 21300016
+    second: GameOverEllen_8
+  - first:
+      213: 21300018
+    second: GameOverEllen_9
+  - first:
+      213: 21300020
+    second: GameOverEllen_10
+  - first:
+      213: 21300022
+    second: GameOverEllen_11
+  - first:
+      213: 21300024
+    second: GameOverEllen_12
+  - first:
+      213: 21300026
+    second: GameOverEllen_13
+  - first:
+      213: 21300028
+    second: GameOverEllen_14
+  - first:
+      213: 21300030
+    second: GameOverEllen_15
+  - first:
+      213: 21300032
+    second: GameOverEllen_16
+  - first:
+      213: 21300034
+    second: GameOverEllen_17
+  - first:
+      213: 21300036
+    second: GameOverEllen_18
+  - first:
+      213: 21300038
+    second: GameOverEllen_19
+  - first:
+      213: 21300040
+    second: GameOverEllen_20
+  - first:
+      213: 21300042
+    second: GameOverEllen_21
+  - first:
+      213: 21300044
+    second: GameOverEllen_22
+  - first:
+      213: 21300046
+    second: GameOverEllen_23
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 512
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GameOverEllen_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1552
+        width: 452
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da154c23732b3d090800000000000000
+      internalID: -8010863362017308243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_1
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1552
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5ee7a3ce62cf970800000000000000
+      internalID: 8789943368755897847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_2
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 1552
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ef481bb2b74a6e0800000000000000
+      internalID: -1827200121213485537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_3
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 1552
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca9547b694e0e130800000000000000
+      internalID: 3594123838612675271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_4
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 1552
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ac8771c5eb93c30800000000000000
+      internalID: 4339709018688244228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_5
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 1552
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8e38e9eb4e593cc0800000000000000
+      internalID: -3730847136159875441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_6
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1043
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3e2985e1546ac70800000000000000
+      internalID: 8981942503474389951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_7
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 1043
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9369e1cfefc0d9c00800000000000000
+      internalID: 908896989089797689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_8
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1043
+        width: 466
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b4e6a6f5d0ec4990800000000000000
+      internalID: -7400292878105779016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_9
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 1043
+        width: 466
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9f33df8526bff90800000000000000
+      internalID: -6918828268179949141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_10
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 1043
+        width: 466
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2239bc14b5a4375a0800000000000000
+      internalID: -6524789679323376862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_11
+      rect:
+        serializedVersion: 2
+        x: 2587
+        y: 1043
+        width: 457
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a51b73eefac4add0800000000000000
+      internalID: -2475630699059931744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 534
+        width: 452
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06dd10b4d3444880800000000000000
+      internalID: -8627696405368154614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_13
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 534
+        width: 452
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75736f233fa9b360800000000000000
+      internalID: 7185967314819577213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_14
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 534
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e68dcf10ba3c112d0800000000000000
+      internalID: -3309649111900432274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_15
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 534
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56ebd60a634e73c40800000000000000
+      internalID: 5492109193872522853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_16
+      rect:
+        serializedVersion: 2
+        x: 2091
+        y: 534
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40209357997bc0de0800000000000000
+      internalID: -1365514717275553276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_17
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 775
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d729a03c604f4c0800000000000000
+      internalID: -4254768313192514293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_18
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 534
+        width: 441
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0457fa9d1065790800000000000000
+      internalID: -7541838491522088799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_19
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 768
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5500b039c4a98e880800000000000000
+      internalID: -8581439436279316395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_20
+      rect:
+        serializedVersion: 2
+        x: 2593
+        y: 749
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7428f809dbe3f1c90800000000000000
+      internalID: -7196964695619698105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_21
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 25
+        width: 467
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546919c20d33da400800000000000000
+      internalID: 336982516316608069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_22
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 25
+        width: 466
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6f794246464e130800000000000000
+      internalID: 3595108783821944541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_23
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 25
+        width: 464
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1e759a6f4670c80800000000000000
+      internalID: -8356599572996824665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_24
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 25
+        width: 457
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61633145627361900800000000000000
+      internalID: 654771433587815958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_25
+      rect:
+        serializedVersion: 2
+        x: 2075
+        y: 25
+        width: 457
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19fe99c4446e87450800000000000000
+      internalID: 6086868077408546705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameOverEllen_26
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 25
+        width: 452
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feed52928e31c7270800000000000000
+      internalID: 8249490505279594223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: e703ccbd11a77f748b9c654d1f6c80f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
