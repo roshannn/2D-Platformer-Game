@@ -15,7 +15,8 @@ public class LoseCollider : MonoBehaviour
         Debug.Log("collision detected");
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            SceneManager.LoadScene(currentSceneIndex);
+            SceneManager.LoadScene(0);
         }
     }
+   
 }

@@ -252,4 +252,5 @@ MonoBehaviour:
   scorePerKey: 10
   scoreController: {fileID: 0}
   moveSpeed: 7
-  jumpForce: 25
+  jumpForce: 15
+  sceneLoader: {fileID: 0}

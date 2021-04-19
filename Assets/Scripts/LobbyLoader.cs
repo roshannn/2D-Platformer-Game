@@ -16,5 +16,6 @@ public class LobbyLoader : MonoBehaviour
     private void PlayGame()
     {
         LevelSelection.SetActive(true);
+        
     }
 }

@@ -14,6 +14,7 @@ public class SceneLoader : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
             lvlChange = true;
+            LevelManager.Instance.MarkLevelComplete();
         }
         
     }
@@ -41,8 +42,9 @@ public class SceneLoader : MonoBehaviour
         lvlChange = false;
     }
 
-    public void LoadStartScene()
+    public void LoadLobbySceneFromGameOver()
     {
+        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
     }
 }

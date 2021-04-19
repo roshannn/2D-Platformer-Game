@@ -150,8 +150,7 @@ public class PlayerController : MonoBehaviour
 
             if (jump > 0 && isGrounded)
             {
-                rb2d.AddForce(new Vector2(0, jumpForce),ForceMode2D.Impulse);
-                isGrounded = false;
+                rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
         }
         

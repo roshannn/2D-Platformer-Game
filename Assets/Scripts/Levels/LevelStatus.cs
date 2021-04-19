@@ -1,4 +1,4 @@
-﻿public enum LevelStatus
+﻿public enum Levels
 {
     Locked,
     Unlocked,
