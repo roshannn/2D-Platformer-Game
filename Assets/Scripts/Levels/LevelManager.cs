@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
@@ -18,29 +19,24 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-    }
-
-    private void Start()
-    {
-        if(GetLevelStatus(Levels[0]) == LevelStatus.Locked)
+        if (GetLevelStatus(Levels[0]) == LevelStatus.Locked)
         {
             SetLevelStatus(Levels[0], LevelStatus.Unlocked);
         }
     }
 
+    
+
     public void MarkLevelComplete()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        
-        SetLevelStatus(scene.name, LevelStatus.Completed);
-
-        int nextSceneIndex = scene.buildIndex + 1;
+        Scene currentScene = SceneManager.GetActiveScene();
+        int currentSceneIndex = Array.FindIndex(Levels, level => level == currentScene.name);
+        LevelManager.Instance.SetLevelStatus(Levels[currentSceneIndex], LevelStatus.Completed);
+        int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex < Levels.Length)
-        {
-            Scene nextScene = SceneManager.GetSceneByBuildIndex(nextSceneIndex);
-            LevelManager.Instance.SetLevelStatus(nextScene.name, LevelStatus.Unlocked);
+        {    
+            LevelManager.Instance.SetLevelStatus(Levels[nextSceneIndex], LevelStatus.Unlocked);
         }
-        
     }
 
     public LevelStatus GetLevelStatus(string level)
@@ -53,5 +49,6 @@ public class LevelManager : MonoBehaviour
     public void SetLevelStatus(string level, LevelStatus levelStatus)
     {
         PlayerPrefs.SetInt(level, (int)levelStatus);
+        Debug.Log("Level : " + level + " Status : " + levelStatus);
     }
 }

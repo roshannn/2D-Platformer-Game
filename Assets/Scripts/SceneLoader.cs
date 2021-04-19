@@ -14,7 +14,7 @@ public class SceneLoader : MonoBehaviour
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
             lvlChange = true;
-            LevelManager.Instance.MarkLevelComplete();
+            
         }
         
     }
@@ -28,7 +28,9 @@ public class SceneLoader : MonoBehaviour
     {
         if (lvlChange)
         {
+            LevelManager.Instance.MarkLevelComplete();
             LoadNextScene();
+           
         }
     }
     public void ReloadScene()
@@ -44,7 +46,6 @@ public class SceneLoader : MonoBehaviour
 
     public void LoadLobbySceneFromGameOver()
     {
-        PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(0);
     }
 }

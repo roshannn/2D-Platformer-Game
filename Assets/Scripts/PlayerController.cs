@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {   // state variables
     
     bool isGrounded;
-    bool isDead;
+    
     
     [Header("Health...")]
     
@@ -22,7 +22,6 @@ public class PlayerController : MonoBehaviour
     
     const string HORIZONTAL = "Horizontal";
     const string JUMP = "Jump";
-    const string CROUCH = " Crouch";
     const string GROUNDED = "isGrounded";
     
     [Header("Score...")]
@@ -97,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Health: " + health);
+
         if (collision.gameObject.GetComponent<EnemyController>() != null && health>0)
         {
             DamagePlayer();
@@ -109,7 +108,7 @@ public class PlayerController : MonoBehaviour
         health--;
         if (health == 0)
         {
-            StartCoroutine(PlayerDeath());
+            DeathAnimation();
         }
     }
 
@@ -118,18 +117,20 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Health: " + health);
     }
     
-    IEnumerator PlayerDeath()
+    private void DeathAnimation()
     {
         animator.SetBool("Dead", true);
-        yield return new WaitForSeconds(1);
-        sceneLoader.ReloadScene();
+        
     }
     public void PickUpKey()
     {
         scoreController.IncreaseScore(scorePerKey);
     }
 
-    
+    private void ReloadScene()
+    {
+        sceneLoader.ReloadScene();
+    }
     
     
 

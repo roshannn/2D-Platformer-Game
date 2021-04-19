@@ -3019,6 +3019,11 @@ PrefabInstance:
       propertyPath: playerController
       value: 
       objectReference: {fileID: 731085158}
+    - target: {fileID: 8732284530238333224, guid: feafcbe26c7e7014ea973ea5d73e897b,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: feafcbe26c7e7014ea973ea5d73e897b, type: 3}
 --- !u!4 &1990602202 stripped

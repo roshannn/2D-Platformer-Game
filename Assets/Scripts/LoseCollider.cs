@@ -5,11 +5,8 @@ using UnityEngine.SceneManagement;
 public class LoseCollider : MonoBehaviour
 {
     
-    int currentSceneIndex;
-    private void Start()
-    {
-        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-    }
+    
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("collision detected");
