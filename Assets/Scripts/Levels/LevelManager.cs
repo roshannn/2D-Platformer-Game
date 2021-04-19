@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
     private static LevelManager instance;
     public static LevelManager Instance { get { return instance; } }
 
-    public string Level1;
+    public string[] Levels;
     private void Awake()
     {
         if (instance == null)
@@ -22,19 +22,25 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        if(GetLevelStatus(Level1) == LevelStatus.Locked)
+        if(GetLevelStatus(Levels[0]) == LevelStatus.Locked)
         {
-            SetLevelStatus(Level1, LevelStatus.Unlocked);
+            SetLevelStatus(Levels[0], LevelStatus.Unlocked);
         }
     }
 
     public void MarkLevelComplete()
     {
         Scene scene = SceneManager.GetActiveScene();
-        LevelManager.Instance.SetLevelStatus(scene.name, LevelStatus.Completed);
+        
+        SetLevelStatus(scene.name, LevelStatus.Completed);
+
         int nextSceneIndex = scene.buildIndex + 1;
-        Scene nextScene = SceneManager.GetSceneAt(nextSceneIndex);
-        LevelManager.Instance.SetLevelStatus(nextScene.name, LevelStatus.Unlocked);
+        if (nextSceneIndex < Levels.Length)
+        {
+            Scene nextScene = SceneManager.GetSceneByBuildIndex(nextSceneIndex);
+            LevelManager.Instance.SetLevelStatus(nextScene.name, LevelStatus.Unlocked);
+        }
+        
     }
 
     public LevelStatus GetLevelStatus(string level)
