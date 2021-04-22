@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         CrouchAnimation(crouch);
         PlayerMovement(horizontal, crouch, jump);
         CheckHealth();
-        isGrounded = jumpCollider.GrounChecker();
+        isGrounded = jumpCollider.GroundChecker();
     }
 
     private void CheckHealth()

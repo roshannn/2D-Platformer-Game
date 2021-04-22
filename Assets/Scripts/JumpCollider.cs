@@ -21,7 +21,7 @@ public class JumpCollider : MonoBehaviour
         }
     }
 
-    public bool GrounChecker()
+    public bool GroundChecker()
     {
         return groundChecker;
     }

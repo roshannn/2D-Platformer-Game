@@ -8,6 +8,8 @@ TagManager:
   - feet
   - SmartEnemy
   - IdiotEnemy
+  - WallGround
+  - Underground
   layers:
   - Default
   - TransparentFX

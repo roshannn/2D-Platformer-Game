@@ -7,37 +7,24 @@ public class EnemyController : MonoBehaviour
 {
     [Range(0, 10)] public float moveSpeed;
     public Animator animator;
-    public GameObject SmartCollider;
-    
+    [SerializeField] GameObject smartEnemyCollider;
     private void Start()
-    {
-        CheckIfSmart();
-    }
-
-    private void CheckIfSmart()
     {
         if(gameObject.tag == "SmartEnemy")
         {
-            SmartCollider.SetActive(true);
+            smartEnemyCollider.SetActive(true);
         }
-        else
+        else if(gameObject.tag == "IdiotEnemy") 
         {
-            SmartCollider.SetActive(false);
+            smartEnemyCollider.SetActive(false);
         }
     }
 
-    
+
     public void MovementFlip()
     {
         Vector3 scale = transform.localScale;
-        if (scale.x < 0)
-        {
-            scale.x = -1 * Mathf.Abs(scale.x);
-        }
-        else if (scale.x > 0)
-        {
-            scale.x = Mathf.Abs(scale.x);
-        }
+        scale.x *= -1f;
         transform.localScale = scale;
     }
 

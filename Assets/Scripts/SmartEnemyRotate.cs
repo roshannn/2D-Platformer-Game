@@ -4,28 +4,31 @@ using UnityEngine;
 
 public class SmartEnemyRotate : MonoBehaviour
 {
-    EnemyController enemyController;
-    private void Start()
-    {
-        enemyController = this.GetComponentInParent<EnemyController>();
-    }
+    public EnemyController enemyController;
+    bool isGrounded=true;
+    bool firstCollisionDone = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground")
+            {
+                firstCollisionDone = true;
+                isGrounded = true;
+            }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "ground")
         {
-            Debug.Log("ground detected by enemy");
-        }
-        if (collision.gameObject.tag == "wall")
+            isGrounded = false;
+        } 
+    }
+    private void Update()
+    {
+        if (!isGrounded && firstCollisionDone)
         {
             enemyController.MovementFlip();
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "ground")
-        {
-            enemyController.MovementFlip();
-        }
-    }   
 }
 
