@@ -683,6 +683,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1108932495056584437, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_text
+      value: 'Level 3
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193303334109973713, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_text
+      value: Level 4
+      objectReference: {fileID: 0}
     - target: {fileID: 1917607790593222435, guid: 1494355fa4e30604a872ed481b0d47a3,
         type: 3}
       propertyPath: m_IsActive
@@ -762,6 +774,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_text
+      value: run n jump
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264165364234117767, guid: 1494355fa4e30604a872ed481b0d47a3,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5264165364786795540, guid: 1494355fa4e30604a872ed481b0d47a3,
         type: 3}

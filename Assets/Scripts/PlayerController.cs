@@ -139,7 +139,7 @@ public class PlayerController : MonoBehaviour
         if (!animator.GetBool("Dead"))
         {
             Vector3 playerPos = transform.position;
-            if (crouch > 0)
+            if (crouch > 0 && animator.GetBool("isCrouch"))
             {
                 playerPos.x += horizontal * moveSpeed * Time.deltaTime * 0.2f;
             }
@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
 
             if (jump > 0 && isGrounded)
             {
-                rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                rb2d.velocity = new Vector3(0, jumpForce, 0);
             }
         }
         
@@ -174,7 +174,19 @@ public class PlayerController : MonoBehaviour
             boxCollider.size = new Vector2(0.62f, 2.07f);
         }
     }
-
+    private void CheckFlipped(float horizontal)
+    {
+        Vector3 scale = transform.localScale;
+        if (horizontal < 0)
+        {
+            scale.x = -1 * Mathf.Abs(scale.x);
+        }
+        else if (horizontal > 0)
+        {
+            scale.x = Mathf.Abs(scale.x);
+        }
+        transform.localScale = scale;
+    }
     private void MoveAnimation(float horizontal)
     {
 
@@ -182,16 +194,7 @@ public class PlayerController : MonoBehaviour
         {
             float absHorizontal = Mathf.Abs(horizontal);
             animator.SetFloat("Speed", absHorizontal);
-            Vector3 scale = transform.localScale;
-            if (horizontal > 0)
-            {
-                scale.x = absHorizontal;
-            }
-            else if (horizontal < 0)
-            {
-                scale.x = -1f * absHorizontal;
-            }
-            transform.localScale = scale;
+            CheckFlipped(horizontal);
         }
         
     }
