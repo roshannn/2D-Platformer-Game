@@ -8,7 +8,7 @@ public class LobbyLoader : MonoBehaviour
     public Button buttonPlay;
     public Button buttonBack;
     public Button buttonReset;
-    public GameObject LevelSelection;
+    public GameObject levelSelection;
 
     private void Awake()
     {
@@ -19,12 +19,12 @@ public class LobbyLoader : MonoBehaviour
    
     private void PlayGame()
     {
-        LevelSelection.SetActive(true);
+        levelSelection.SetActive(true);
         
     }
     private void GoBack()
     {
-        LevelSelection.SetActive(false);
+        levelSelection.SetActive(false);
     }
 
     private void ClearPrefs()

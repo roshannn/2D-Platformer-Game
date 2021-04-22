@@ -8,13 +8,12 @@ using System;
 public class LevelLoader : MonoBehaviour
 {
     private Button button;
-    public GameObject LevelCompletedTick;
+    public GameObject levelCompletedTick;
     LevelStatus levelStatus;
     public string LevelName;
-    private TextMeshProUGUI textComponent;
+    [SerializeField] TextMeshProUGUI textComponent;
     private void Awake()
     {
-        textComponent = GetComponentInChildren<TextMeshProUGUI>();
         levelStatus = LevelManager.Instance.GetLevelStatus(LevelName);
         button = GetComponent<Button>();
         button.onClick.AddListener(OnClick);
@@ -22,12 +21,11 @@ public class LevelLoader : MonoBehaviour
     }
     private void Start()
     {
-        textComponent = button.GetComponentInChildren<TextMeshProUGUI>();
         CheckLevelStatus();
         if (levelStatus == LevelStatus.Completed)
         {
             Debug.Log("tick active");
-            LevelCompletedTick.SetActive(true);
+            levelCompletedTick.SetActive(true);
         }
     }
 
