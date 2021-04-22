@@ -7,9 +7,17 @@ public class EnemyController : MonoBehaviour
 {
     [Range(0, 10)] public float moveSpeed;
     public Animator animator;
-    void Start()
+    [SerializeField] GameObject smartEnemyCollider;
+    private void Start()
     {
-        
+        if(gameObject.tag == "Smart Enemy")
+        {
+            smartEnemyCollider.SetActive(true);
+        }
+        else if(gameObject.tag == "Idiot Enemy") 
+        {
+            smartEnemyCollider.SetActive(false);
+        }
     }
 
 

@@ -6,10 +6,12 @@ public class SmartEnemyRotate : MonoBehaviour
 {
     public EnemyController enemyController;
     bool isGrounded=true;
+    bool firstCollisionDone = false;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "ground")
             {
+                firstCollisionDone = true;
                 isGrounded = true;
             }
     }
@@ -23,7 +25,7 @@ public class SmartEnemyRotate : MonoBehaviour
     }
     private void Update()
     {
-        if (!isGrounded)
+        if (!isGrounded && firstCollisionDone)
         {
             enemyController.MovementFlip();
         }
