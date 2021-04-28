@@ -132,8 +132,27 @@ public class PlayerController : MonoBehaviour
         sceneLoader.ReloadScene();
     }
     
+    private void DeathSound()
+    {
+        SoundManager.Instance.Play(Sounds.PlayerDeath);
+    }
+    private void MovementLeftFootSound()
+    {
+        SoundManager.Instance.Play(Sounds.PlayerLeftFoot);
+    }
+    private void MovementRightFootSound()
+    {
+        SoundManager.Instance.Play(Sounds.PlayerRightFoot);
+    }
+    private void MovementJumpSound()
+    {
+        SoundManager.Instance.Play(Sounds.PlayerJump);
+    }
+    private void MovementJumpLandSound()
+    {
+        SoundManager.Instance.Play(Sounds.PlayerJumpLand);
+    }
     
-
     private void PlayerMovement(float horizontal,float crouch,float jump)
     {
         if (!animator.GetBool("Dead"))
@@ -201,7 +220,6 @@ public class PlayerController : MonoBehaviour
 
     private void JumpAnimation(float jump)
     {
-        
         if (jump > 0)
         {
             animator.SetBool("Jump", true);

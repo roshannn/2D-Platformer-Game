@@ -6,29 +6,50 @@ using UnityEngine.UI;
 public class LobbyLoader : MonoBehaviour
 {
     public Button buttonPlay;
-    public Button buttonBack;
+    public Button buttonBackFromLevels;
+    public Button buttonBackFromSettings; 
     public Button buttonReset;
-    public GameObject levelSelection;
+    public Button buttonSettings;
+    public Button buttonMute;
+    public GameObject LevelSelection;
+    public GameObject SettingsSelection;
 
     private void Awake()
     {
         buttonPlay.onClick.AddListener(PlayGame);
-        buttonBack.onClick.AddListener(GoBack);
+        buttonBackFromLevels.onClick.AddListener(GoBackFromLevelSelection);
+        buttonBackFromSettings.onClick.AddListener(GoBackFromSettingsSelection);
         buttonReset.onClick.AddListener(ClearPrefs);
+        buttonSettings.onClick.AddListener(Settings);
     }
-   
+    
     private void PlayGame()
     {
-        levelSelection.SetActive(true);
-        
+        SoundManager.Instance.Play(Sounds.StartGame);
+        LevelSelection.SetActive(true);
     }
-    private void GoBack()
+
+    private void Settings()
     {
-        levelSelection.SetActive(false);
+        SoundManager.Instance.Play(Sounds.StartGame);
+        SettingsSelection.SetActive(true);
+    }
+
+    
+    private void GoBackFromSettingsSelection()
+    {
+        SoundManager.Instance.Play(Sounds.Back);
+        SettingsSelection.SetActive(false);
+    }
+    private void GoBackFromLevelSelection()
+    {
+        SoundManager.Instance.Play(Sounds.Back);
+        LevelSelection.SetActive(false);
     }
 
     private void ClearPrefs()
     {
+        SoundManager.Instance.Play(Sounds.Reset);
         PlayerPrefs.DeleteAll();
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }

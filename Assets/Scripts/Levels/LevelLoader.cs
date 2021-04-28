@@ -37,11 +37,8 @@ public class LevelLoader : MonoBehaviour
                 textComponent.text = "Locked";
                 break;
 
-            case LevelStatus.Unlocked:
+            default:
                 textComponent.text = LevelName;
-                break;
-
-            case LevelStatus.Completed:
                 break;
         }
     }
@@ -51,13 +48,11 @@ public class LevelLoader : MonoBehaviour
         switch (levelStatus)
         {
             case LevelStatus.Locked:
+                SoundManager.Instance.Play(Sounds.LevelLocked);
                 break;
 
-            case LevelStatus.Unlocked:
-                SceneManager.LoadScene(LevelName);
-                break;
-
-            case LevelStatus.Completed:
+            default:
+                SoundManager.Instance.Play(Sounds.LevelSelect);
                 SceneManager.LoadScene(LevelName);
                 break;
         }

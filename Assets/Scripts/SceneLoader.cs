@@ -17,6 +17,7 @@ public class SceneLoader : MonoBehaviour
     }
     private void Start()
     {
+        SoundManager.Instance.Play(Sounds.LevelStart);
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -31,6 +32,7 @@ public class SceneLoader : MonoBehaviour
         if (lvlChange)
         {
             LevelManager.Instance.MarkLevelComplete();
+            SoundManager.Instance.Play(Sounds.LevelComplete);
             LoadNextScene();
 
         }
